@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪</title>
+</head>
+<body>
+  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  
+  <script>
+    // Get your shorts on - this is an array workout!
+    // ## Array Cardio Day 1
+
+    // Some data we can work with
+
+    const inventors = [
+      { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+      { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+      { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+      { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+      { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+      { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+      { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+      { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+      { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+      { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+      { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+      { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+    ];
+
+    const people = ['Beck, Glenn', 'Becker, Carl', 'Aeckett, Samuel', 'Ceddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
+
+    // Array.prototype.filter()
+    // 1. 篩選 1500 年代的發明家
+    
+    // const inv = inventors.filter(function(a){
+    //   if(a.year >= 1500 && a.year < 1600){
+    //     return a
+    //   }
+    // })
+    const invFilter = inventors.filter(a => (a.year >= 1500 && a.year < 1600));
+    console.log("1");
+    console.table(invFilter);
+
+    // Array.prototype.map()
+    // 2. 篩選出發明家的姓氏
+    const invMap = inventors.map(a => `${a.first} ${a.last}`);
+    console.log("2");
+    console.table(invMap);
+
+    // Array.prototype.sort()
+    // 3. 按出生年份排序，由小到大
+    const invSort = inventors.sort((a, b) => a.year - b.year);
+    console.log("3");
+    console.table(invSort);
+
+    // Array.prototype.reduce()
+    // 4. 所有發明家存活總和
+
+    const invReduce = inventors.reduce((a, b) => {
+      return a + (b.passed - b.year);
+    }, 0);
+    console.log("4");
+    console.log(invReduce);
+  
+    // 5. 活最久的排後面
+    const invSorts = inventors.sort((a, b) => {
+      return (a.passed - a.year) - (b.passed - b.year);
+    });
+    console.log("5");
+    console.table(invSorts);
+
+    // 6. 搜尋出有"de"文字的列表
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+    // Ans:
+    // const de = Array.from(document.querySelectorAll('.mw-category a'))
+    // de.map(a => a.textContent).filter(fil => fil.includes('de'))
+
+
+    // 7. 按照姓氏来对发明家进行排序
+    // Sort the people alphabetically by last name
+    const pel = people.sort()
+    console.log(pel)
+
+    // 8. 算出相同的姓名有個，並輸出陣列
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    let summary = data.reduce(function(object, item){
+      //假如物件中還沒有該屬性 便創造該屬性且值為0
+      if(object[item] === undefined){
+          object[item] = 0;
+      }
+      //每取得對應屬性一次，對應的屬性值+1
+      object[item]++;
+      //最後再將目前物件的狀態回傳回去
+      return object;
+    }, {})
+    console.log(summary);
+  </script>
+</body>
+</html>
