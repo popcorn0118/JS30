@@ -4,8 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>555</title>
+    <style>
+        .show {
+            position: fixed;
+        }
+        .img-wp {
+            margin: 0 auto;
+            width: 100%;
+            height: 80vh;
+            text-align: center;
+            position: relative;
+        }
+        .img-wp .img,.img-wp .img2 {
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .main {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: #e8eee1;
+        }
+        .main img {
+            position: absolute;
+            transition: 0.4s;
+        }
+        .main .img {
+            top: 20px;
+            left: 0;
+            transform: translateX(-100%);
+        }
+        .main .img2 {
+            right: 0;
+            bottom: 20px;
+            transform: translateX(100%);
+        }
+    </style>
 </head>
 <body>
-    123123123
+    <p id="number">0</p>
+    <input type="button" value="點" onclick="ShowMeDate()">
+
+    <form name="Show" class="show">
+        <input type="text" name="MouseX" value="0" size="4">X
+        <input type="text" name="MouseY" value="0" size="4">Y</br>
+        <p id="x"></p>
+        <p id="y"></p>
+    </form>
+    <div class="img-wp">
+        <img class="img" src="index.png" alt="">
+        <img class="img2" src="index.png" alt="">
+    </div>
+    <div class="main">
+        <img class="img" data-num="100" src="https://static.fotor.com.cn/assets/stickers/12487/87f02775-bde6-45b9-a34e-9586169fadb4_medium_thumb.jpg" alt="">
+        <img class="img2" data-num="100" src="https://static.fotor.com.cn/assets/stickers/12487/87f02775-bde6-45b9-a34e-9586169fadb4_medium_thumb.jpg" alt="">
+    </div>
+    <div class="main2">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque aliquid dolores optio soluta ullam harum labore quidem hic numquam laboriosam dolor distinctio modi incidunt illum mollitia beatae, suscipit quis nemo molestias reiciendis accusantium tenetur? Accusamus suscipit earum excepturi nisi, ullam quos soluta dolore molestias, mollitia atque esse eum eaque maiores vitae modi asperiores, itaque magnam provident? Architecto, veniam sed autem quod omnis nam in culpa labore velit reprehenderit adipisci consectetur dolores nihil illo atque commodi. Facere sunt molestias tempore ducimus quas, harum recusandae fuga voluptate pariatur voluptatem numquam totam at optio neque eius fugiat expedita autem sint quasi. Blanditiis ad minima iste! Et doloremque ab pariatur quos corporis architecto alias voluptatibus facilis delectus hic magnam recusandae minima aut animi placeat, necessitatibus a incidunt accusamus minus, autem assumenda ut veniam molestias! Nam quis omnis vitae debitis quo earum enim obcaecati, quisquam eos veniam quam libero quasi officia expedita numquam eveniet dolores. Corporis, libero? Cumque sunt sapiente, nihil ex pariatur fugiat, vel ea debitis voluptatibus a veritatis. Provident consequuntur rem vero quibusdam, reprehenderit sunt quisquam porro dolorem tempora? Nemo unde hic laboriosam cumque! Nihil assumenda harum perspiciatis animi? Molestias eos facilis laudantium aperiam dolorum, quis perferendis magni, ad, ut nisi totam!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio molestiae enim, minus praesentium, omnis aliquam saepe itaque, soluta eveniet quod vero eos perspiciatis non amet quam sapiente magni animi adipisci ab minima distinctio laboriosam aliquid quae? Dolorem, eius voluptatem ea sequi eligendi tempora, esse iste fugiat et doloribus iusto numquam harum eos recusandae placeat exercitationem pariatur illum facilis omnis odio facere dolorum natus odit! Sed, vel nesciunt vero nemo ab harum. Placeat officia quisquam architecto perspiciatis, perferendis cum itaque officiis ullam. Quod consectetur optio ad, est quibusdam mollitia, saepe itaque ratione beatae quo eligendi exercitationem, ea dolore. Delectus corporis rerum saepe temporibus ut sapiente ratione dignissimos magnam, est beatae! Ducimus nulla molestias maxime deserunt a iste quam, sint, quaerat consectetur incidunt id recusandae quae dignissimos nesciunt labore tempore harum quis. Aliquam inventore impedit excepturi rem a ullam voluptatibus distinctio animi dolor porro incidunt dolorum deleniti doloribus quia iste sint eius, magnam eveniet dignissimos temporibus necessitatibus nesciunt. Vero maxime optio, at voluptate fugiat quaerat non tempora, tenetur officia totam natus? Placeat dolore nulla molestiae, quam perspiciatis numquam magni tempora id blanditiis, quia illo libero sequi ullam, earum itaque ex. Quae delectus sed laborum ipsum earum! Exercitationem mollitia eveniet facilis eum dolore.
+    </div>
+    <div class="main3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque aliquid dolores optio soluta ullam harum labore quidem hic numquam laboriosam dolor distinctio modi incidunt illum mollitia beatae, suscipit quis nemo molestias reiciendis accusantium tenetur? Accusamus suscipit earum excepturi nisi, ullam quos soluta dolore molestias, mollitia atque esse eum eaque maiores vitae modi asperiores, itaque magnam provident? Architecto, veniam sed autem quod omnis nam in culpa labore velit reprehenderit adipisci consectetur dolores nihil illo atque commodi. Facere sunt molestias tempore ducimus quas, harum recusandae fuga voluptate pariatur voluptatem numquam totam at optio neque eius fugiat expedita autem sint quasi. Blanditiis ad minima iste! Et doloremque ab pariatur quos corporis architecto alias voluptatibus facilis delectus hic magnam recusandae minima aut animi placeat, necessitatibus a incidunt accusamus minus, autem assumenda ut veniam molestias! Nam quis omnis vitae debitis quo earum enim obcaecati, quisquam eos veniam quam libero quasi officia expedita numquam eveniet dolores. Corporis, libero? Cumque sunt sapiente, nihil ex pariatur fugiat, vel ea debitis voluptatibus a veritatis. Provident consequuntur rem vero quibusdam, reprehenderit sunt quisquam porro dolorem tempora? Nemo unde hic laboriosam cumque! Nihil assumenda harum perspiciatis animi? Molestias eos facilis laudantium aperiam dolorum, quis perferendis magni, ad, ut nisi totam!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio molestiae enim, minus praesentium, omnis aliquam saepe itaque, soluta eveniet quod vero eos perspiciatis non amet quam sapiente magni animi adipisci ab minima distinctio laboriosam aliquid quae? Dolorem, eius voluptatem ea sequi eligendi tempora, esse iste fugiat et doloribus iusto numquam harum eos recusandae placeat exercitationem pariatur illum facilis omnis odio facere dolorum natus odit! Sed, vel nesciunt vero nemo ab harum. Placeat officia quisquam architecto perspiciatis, perferendis cum itaque officiis ullam. Quod consectetur optio ad, est quibusdam mollitia, saepe itaque ratione beatae quo eligendi exercitationem, ea dolore. Delectus corporis rerum saepe temporibus ut sapiente ratione dignissimos magnam, est beatae! Ducimus nulla molestias maxime deserunt a iste quam, sint, quaerat consectetur incidunt id recusandae quae dignissimos nesciunt labore tempore harum quis. Aliquam inventore impedit excepturi rem a ullam voluptatibus distinctio animi dolor porro incidunt dolorum deleniti doloribus quia iste sint eius, magnam eveniet dignissimos temporibus necessitatibus nesciunt. Vero maxime optio, at voluptate fugiat quaerat non tempora, tenetur officia totam natus? Placeat dolore nulla molestiae, quam perspiciatis numquam magni tempora id blanditiis, quia illo libero sequi ullam, earum itaque ex. Quae delectus sed laborum ipsum earum! Exercitationem mollitia eveniet facilis eum dolore.
+    </div>
+    <div class="main4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque aliquid dolores optio soluta ullam harum labore quidem hic numquam laboriosam dolor distinctio modi incidunt illum mollitia beatae, suscipit quis nemo molestias reiciendis accusantium tenetur? Accusamus suscipit earum excepturi nisi, ullam quos soluta dolore molestias, mollitia atque esse eum eaque maiores vitae modi asperiores, itaque magnam provident? Architecto, veniam sed autem quod omnis nam in culpa labore velit reprehenderit adipisci consectetur dolores nihil illo atque commodi. Facere sunt molestias tempore ducimus quas, harum recusandae fuga voluptate pariatur voluptatem numquam totam at optio neque eius fugiat expedita autem sint quasi. Blanditiis ad minima iste! Et doloremque ab pariatur quos corporis architecto alias voluptatibus facilis delectus hic magnam recusandae minima aut animi placeat, necessitatibus a incidunt accusamus minus, autem assumenda ut veniam molestias! Nam quis omnis vitae debitis quo earum enim obcaecati, quisquam eos veniam quam libero quasi officia expedita numquam eveniet dolores. Corporis, libero? Cumque sunt sapiente, nihil ex pariatur fugiat, vel ea debitis voluptatibus a veritatis. Provident consequuntur rem vero quibusdam, reprehenderit sunt quisquam porro dolorem tempora? Nemo unde hic laboriosam cumque! Nihil assumenda harum perspiciatis animi? Molestias eos facilis laudantium aperiam dolorum, quis perferendis magni, ad, ut nisi totam!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio molestiae enim, minus praesentium, omnis aliquam saepe itaque, soluta eveniet quod vero eos perspiciatis non amet quam sapiente magni animi adipisci ab minima distinctio laboriosam aliquid quae? Dolorem, eius voluptatem ea sequi eligendi tempora, esse iste fugiat et doloribus iusto numquam harum eos recusandae placeat exercitationem pariatur illum facilis omnis odio facere dolorum natus odit! Sed, vel nesciunt vero nemo ab harum. Placeat officia quisquam architecto perspiciatis, perferendis cum itaque officiis ullam. Quod consectetur optio ad, est quibusdam mollitia, saepe itaque ratione beatae quo eligendi exercitationem, ea dolore. Delectus corporis rerum saepe temporibus ut sapiente ratione dignissimos magnam, est beatae! Ducimus nulla molestias maxime deserunt a iste quam, sint, quaerat consectetur incidunt id recusandae quae dignissimos nesciunt labore tempore harum quis. Aliquam inventore impedit excepturi rem a ullam voluptatibus distinctio animi dolor porro incidunt dolorum deleniti doloribus quia iste sint eius, magnam eveniet dignissimos temporibus necessitatibus nesciunt. Vero maxime optio, at voluptate fugiat quaerat non tempora, tenetur officia totam natus? Placeat dolore nulla molestiae, quam perspiciatis numquam magni tempora id blanditiis, quia illo libero sequi ullam, earum itaque ex. Quae delectus sed laborum ipsum earum! Exercitationem mollitia eveniet facilis eum dolore.
+    </div>
+
+    <script>
+        // var imgNum = 0
+        // var scrollFunc = function(e) {
+        //     var e = e || window.event;
+        //     var main = document.getElementsByClassName('main')[0];
+        //     var mainTop = main.getBoundingClientRect().top;
+        //     imgNum = mainTop
+        //     // console.log(this.scrollY)
+        //     var img = document.querySelectorAll('.main .img')[0];
+        //     var img2 = document.querySelectorAll('.main .img2')[0];
+        //     console.log(mainTop/5)
+        //     var pos = e.wheelDelta || e.detail
+        //     if (-mainTop/5 < -50) {
+        //         img.style.transform =`translateX(-${mainTop/5}%)`
+        //     }
+        // }
+        // //    给页面绑定鼠标滚轮事件,针对火狐的非标准事件 
+        // window.addEventListener("DOMMouseScroll", scrollFunc)
+        // //    给页面绑定鼠标滚轮事件，针对Google，mousewheel非标准事件已被弃用，请使用 wheel事件代替
+        // window.addEventListener("wheel", scrollFunc)
+        // //    ie不支持wheel事件，若一定要兼容，可使用mousewheel
+        // window.addEventListener("mousewheel", scrollFunc)
+
+
+
+        var IE = document.all?true:false
+        if (!IE) document.captureEvents(Event.MOUSEMOVE)
+        document.onmousemove = getMouseXY;
+        var tempX = 0
+        var tempY = 0
+        
+        function getMouseXY(e) {
+            if (IE) { 
+                tempX = event.clientX + document.body.scrollLeft
+                tempY = event.clientY + document.body.scrollTop
+            } else {
+                tempX = e.pageX
+                tempY = e.pageY
+            }  
+
+            if (tempX < 0){tempX = 0}
+            if (tempY < 0){tempY = 0}
+
+            document.Show.MouseX.value = tempX
+            document.Show.MouseY.value = tempY
+            var isX = document.getElementById('x')
+            var isY = document.getElementById('y')
+            var isImg = document.getElementsByClassName('img')
+            var isImg2 = document.getElementsByClassName('img2')
+            var imgX = tempX / 10
+            var imgY = tempY / 10
+            isX.innerText = imgX
+            isY.innerText = imgY
+            var w = document.body.clientWidth
+            // 滑鼠位置：圖片位移
+            if (w < tempX) {
+                isImg[0].style.transform ='translateX(calc(-50% +' + imgX + 'px)) translateY(calc(-50% +' + imgY + 'px))'
+                isImg2[0].style.transform ='translateX(calc(-50% +' + imgX / 5 + 'px)) translateY(calc(-50% +' + imgY / 5 + 'px))'
+            } else {
+                isImg[0].style.transform ='translateX(calc(-50% + -' + imgX + 'px)) translateY(calc(-50% + -' + imgY + 'px))'
+                isImg2[0].style.transform ='translateX(calc(-50% + -' + imgX / 5 + 'px)) translateY(calc(-50% + -' + imgY / 5 + 'px))'
+            }
+            return true
+        }
+
+        window.addEventListener('scroll', function(e) {
+            var main = document.getElementsByClassName('main')[0];
+            var mainTop = main.getBoundingClientRect().top;
+            // console.log(this.scrollY)
+            var img = document.querySelectorAll('.main .img')[0];
+            var img2 = document.querySelectorAll('.main .img2')[0];
+
+            // console.log(e)
+            // if (mainTop < 400) {
+            //     if (imgNum > 50) {
+            //         img.style.transform =`translateX(-${imgNum--}%)`
+            //     }
+            // } else {
+                
+            // }
+            console.log(mainTop)
+            
+            if (mainTop < 300) {
+                img.style.transform =`translateX(-50%)`
+            } else {
+                img.style.transform =`translateX(-100%)`
+            }
+            if (mainTop < 100) {
+                img2.style.transform =`translateX(50%)`
+            } else {
+                img2.style.transform =`translateX(100%)`
+            }
+        });    
+    </script>
+    
 </body>
 </html>
